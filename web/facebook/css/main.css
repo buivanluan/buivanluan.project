@@ -1,0 +1,224 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+}
+@font-face { 
+	font-family: Facebook; 
+	src: url("../font/facebook.ttf");}
+.nav{
+	width: 100%;
+	height: 80px;
+	background: #3b5998;
+	font-family: Helvetica, Arial, sans-serif;
+	
+	font-size: 12px;
+
+
+}
+.nav input{
+	margin: 5px 0 5px 0;
+
+
+}
+.nav1{
+	width: 980px;
+	height: 80px;
+	margin: 0 auto;
+	overflow: hidden;
+
+}
+.nav2{
+	width: 58%;
+	float: left;
+	font-family: Facebook;
+	line-height: 80px;
+}
+.nav2 h1 a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 40px;
+
+}
+.nav3{
+	width: 42%;
+	float: right;
+	
+}
+.form1, .form2, .form3{
+	float: right;
+	padding:15px 0 15px 0;
+	color: #fff;
+
+}
+.form3, .form2{
+	padding-right: 14px;
+}
+.form2 a{
+	text-decoration: none;
+	color: #9cb4d8;
+}
+.form1{
+	padding-top: 28px;
+
+
+
+}
+.form1 input{
+	height: 24px;
+	line-height: 24px;
+	color: #fff;
+	font-family: inherit;
+	background: #4267b2;
+	border: 1px solid #29487d;
+	width: 75px;
+	font-size: 12px;
+	font-weight: bold;
+
+	
+}
+
+.form2 input, .form3 input{
+	width: 152px;
+	height: 24px;
+	border:1px solid black;
+	padding: 5px 0 5px 0;
+	padding-left: 5px;
+}
+.content{
+	padding-top: 10px;
+	background: linear-gradient(white, #D3D8E8);
+}
+.content1{
+	width: 980px;
+	margin: 0 auto;
+	height:600px;
+}
+.logo{
+	width: 58%;
+	float: left;
+}
+.logo p{
+	color: #0e385f;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 29px;
+    margin-top: 30px;
+    width: 450px;
+    
+}
+.create{
+	width: 42%;
+	float: left;
+}
+.create h1{
+	font-weight: bold;
+	font-size: 36px;
+	color: #333;
+	line-height: 72px;
+}
+.create p{
+	color: #1d2129;
+    font-size: 19px;
+    padding-bottom:15px;
+}
+.create label{
+	color: #1d2129;
+    font-size: 19px;
+    padding: 10px;
+    margin-top: 10px;
+    padding-left: 0px;
+
+}
+ input#account,  input#password{
+	font-size: 18px;
+    padding: 8px 10px;
+    border:1px solid #bdc7d8;
+    border-radius: 5px;
+    margin top: 10px 0 10px 0;
+    width: 100%;
+}
+input#password{
+	margin-bottom: 30px;
+}
+input#lastname,  input#name{
+	font-size: 18px;
+    padding: 8px 10px;
+    border:1px solid #bdc7d8;
+    border-radius: 5px;    
+    width: 100%;
+    position: relative;
+}
+ input#name{
+ 	float: right;
+ }
+ select#date, select#month, select#year{
+ 	font-size: 13px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #bdc7d8;
+     margin: 10px 0;
+ }
+ select#month{
+ 	width: 85px;
+ }
+ input#dangki{
+ 	margin-top: 20px;
+	font-size: 19px;
+    font-weight: bold;  
+    background: linear-gradient(#67ae55, #578843); 
+    box-shadow: inset 0 1px 1px #a4e388;
+    border-color: #3b6e22;
+    border-radius: 5px;
+    padding: 10px 60px;   
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+}
+span{
+	margin: 10px;
+	padding: 10px;
+}
+ .chung1{
+	position: relative;
+	width: 49%;
+	display: inline-block;
+	
+
+}
+.chung2{
+	float: left;
+	position: relative;
+	width: 49%;
+	display: table;
+	float: right;
+}
+.chung{
+	position: relative;
+	width: 100%;
+	display: table;
+}
+.fa{
+	font-size: 30px;
+    color: red;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+.rieng{
+	padding-top: 5px;
+
+}
+#gender1, #gender2{
+	display: inline-block;
+    padding: 0px 14px;
+    margin-right: 10px;
+    border-radius: 5px;
+    width: 98px;
+    height: 40px;
+    line-height: 40px;
+}
