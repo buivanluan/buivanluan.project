@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css?family=Vibur" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Copse" rel="stylesheet">
+    <script src="https://use.fontawesome.com/cf62ea97ee.js"></script>
+    <style>
+   
+    
+    .container {
+        width: 450px;
+        margin: 0 auto;
+        background: #fff;
+        display: table;
+        padding: 30px 60px;
+        margin-top: 100px;
+        font-family: 'Copse', serif;
+   
+        border-radius: 10px;
+        transition: width 2s;
+    }
+    
+    #note {
+        font-size: 30px;
+        padding: 10px 0;
+        
+    }
+    #quote{
+        text-align: justify;
+    }
+    
+    #author {
+        font-size: 20px;
+        padding: 10px 0;
+        text-align: right;
+    }
+    
+    .icon,
+    .right {
+        margin-top: 20px;
+        width: 50%;
+        float: left;
+    }
+    
+    .fa {
+        font-size: 50px;
+      	padding-left: 20px;
+    }
+    
+    .fa-quote-left {
+        font-size: 30px;
+        margin-right: 10px;
+    }
+    
+    .button {
+        padding: 15px;
+        display: inline-block;
+        border-radius: 5px;
+        float: right;
+        
+        color: #fff;
+    }
+	 .button:active{
+	 	position: relative;
+	 	top: 5px;
+	 
+	 }
+    
+    p {
+        text-align: center;
+        color: #fff;
+    }
+    
+    #writer {
+        text-align: right;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="display">
+            <div id="note"><i class="fa fa-quote-left" aria-hidden="true"></i><span id="quote"></span></div>
+            <div id="author"></div>
+        </div>
+        <div class="btn">
+            <div class="icon">
+               <a href="" title="" id="twitter" target="_blank"> <i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                <a href="" title="" id="tumblr" target="_blank"><i class="fa fa-tumblr-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="right">
+                <div class="button">New quote</div>
+            </div>
+        </div>
+    </div>
+    <p>By Luan</p>
+     <script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous"></script>
+      <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"></script>
+	  <script>
+	  	var color = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857","blue","black","red","green"];
+        var dataquote = {};
+        var author;
+        var i;
+        getquote();
+        getcolor();
+
+	  	$(".button").on("click",function(){
+	  		getquote();
+            getcolor();
+	  		
+	  		
+        });
+        function getquote(){
+            $.ajax({
+                
+                url: 'https://andruxnet-random-famous-quotes.p.mashape.com/', // The URL to the API. You can get this in the API page of the API you intend to consume
+                type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
+                data: {}, // Additional parameters here
+                dataType: 'json',
+                success: function(data) { 
+
+                    dataquote.quote = data.quote;
+                
+                    dataquote.author = "- "+ data.author + " -";
+                    if(dataquote.quote === $("#quote").html()){
+                        getquote();
+                    }else{
+                        $("#quote").html(dataquote.quote);
+                        $("#author").html(dataquote.author);
+                        $("#twitter").attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="' + encodeURIComponent(dataquote.quote)+ encodeURIComponent(dataquote.author));
+                        $("#tumblr").attr('href', 'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=Now%2C%20Voyager&content=' + encodeURIComponent(dataquote.quote)+ encodeURIComponent(dataquote.author));
+
+
+                    }
+                   
+                    
+                },
+                error: function(err) { alert(err); },
+                beforeSend: function(xhr) {
+                xhr.setRequestHeader("X-Mashape-Authorization", "2hHeXCN3GMmshgTTjf4oZOlEexeep1HshGmjsnCnXbdWbgUW5F"); // Enter here your Mashape key
+                }
+                
+
+            })    // 
+        }
+        function getcolor(){
+            i = Math.floor(Math.random()*color.length);
+            $("body").animate({
+                backgroundColor:color[i]
+            },2000);
+            $(".button").animate({
+                backgroundColor:color[i]
+            },2000);
+            $(".container").animate({
+                color:color[i]
+            },2000);$("#twitter").animate({
+                color:color[i]
+            },2000);$("#tumblr").animate({
+                color:color[i]
+            },2000);
+            $("#quote").animate({"opacity" : 0},500);
+            $("#quote").animate({"opacity" : 1},1000);
+            $("#author").animate({"opacity" : 0},500);
+            $("#author").animate({"opacity" : 1},1000);
+        
+        }
+        
+           
+          
+         
+        
+
+      
+	  </script>
+</body>
+
+</html>

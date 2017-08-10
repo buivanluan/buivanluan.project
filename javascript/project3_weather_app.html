@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<link href="https://fonts.googleapis.com/css?family=Mogra" rel="stylesheet">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+	body{
+		font-family: 'Mogra', cursive;
+		text-align: center;
+		background: brown;
+
+	}
+	.container{
+		margin-top: 100px;
+		border: 10px solid black;
+		
+		background: url("http://www.metoffice.gov.uk/binaries/content/gallery/mohippo/images/migrated-image/c/cirrus_clouds.jpg");
+	
+		
+	}
+	h1{
+		font-size: 100px;
+		text-align: center;
+	}
+	p{
+		font-size: 30px;
+	}
+	#name{
+		color: white;
+	}
+	#icon img{
+		width: 110px;
+		margin: 0 -5px
+	}
+	@media (max-width: 991px) {
+		h1{ 
+			font-size: 24px; 
+		}
+		p{
+			font-size: 16px;
+		}
+		#icon img{
+		width: 30px;
+		margin: 0;
+	}
+</style>
+<body>
+<div class="container" style="background-repeat: no-repeat;
+		background-size: cover; background-position: center">
+	<div class="row">
+		<h1><span>Free c</span><span id="icon">0</span><span>de camp Weather app</span></h1>
+
+	</div>
+	<div class="row">
+		<p><span id="city"></span>,<span id="country"></span></p>
+		<p id="show-temperature"><span id="temperature"></span> <span id="temperature-mode">&deg;C</span></p>
+		<p>create by <span id="name">Luân</span></p>
+	</div>		
+</div>
+<script
+	  src="https://code.jquery.com/jquery-3.2.1.js"
+	  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	  crossorigin="anonymous"></script>
+      <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"></script>
+<script >
+var currentposition = {};
+var keyAPI = 'e1537247bde44946ae525924171506';
+var tempK,tempC,tempF,city,country,icon;
+var temp = [];
+var run = 0
+
+	if(navigator.geolocation){
+    	navigator.geolocation.getCurrentPosition(function(position){
+    	
+    	currentposition.long = position.coords.longitude;
+    	currentposition.lat = position.coords.latitude;
+    	
+    	
+     	$.ajax({
+                
+                url: 'https://api.apixu.com/v1/current.json?key=e1537247bde44946ae525924171506&q='+currentposition.lat +','+ currentposition.long ,// The URL to the API. You can get this in the API page of the API you intend to consume
+                type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
+                data: {}, // Additional parameters here
+                dataType: 'json',
+                success: function(data) { 
+                	console.log(data);
+                	tempC =data.current.temp_c;
+                	tempK = tempC + 273;
+                	tempF =data.current.temp_f;
+                	city = data.location.name;
+                	country = data.location.country;
+                	icon = data.current.condition.icon;  
+                           	
+                	// changeImage()
+                	temp = [["&deg;C",tempC],["&deg;F",tempF],["&deg;K",tempK]]
+
+
+                $("#city").html(city);
+                $("#country").html(country);
+                showTemperature()
+                $("#show-temperature").on("click",function(){
+                	run+=1
+                	if(run > 2){
+                		run = 0
+                	}
+                	
+                	 showTemperature()
+
+                })
+
+                	
+                	
+                  
+                },
+                error: function(err) { alert(err); },
+             
+                
+
+            })    // 
+
+    });
+  };
+
+ function showTemperature(){
+	$("#temperature").html(temp[run][1]);
+	$("#temperature-mode").html(temp[run][0]);
+	$("#icon").html('<img src=" https:'+ icon +'" alt="">')
+}
+
+ 
+	
+	 
+</script>
+	
+</body>
+</html>

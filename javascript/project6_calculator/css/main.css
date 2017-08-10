@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*========common========*/
+body{
+    background: #D4CFCF;
+}
+.container{
+    width: 406px;
+    margin: 0 auto;
+} 
+/*==========.calculator-main========*/
+.calculator-main{ 
+    margin: 60px 0;
+    background: #E6E7D6;
+    padding: 0 40px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    padding-bottom: 30px;
+    border-radius: 30px;
+    box-shadow: inset 0px -10px 20px 0 #000, 0px 30px 20px -10px #000;
+}
+.head{
+    padding: 10px 0;
+    text-shadow: 0 3px 1px #000;
+    color: #8A1D1D;
+
+}
+/*=========.display==========*/
+.display{
+    height: 85px;
+    border: 1px solid #C9C9C9;
+    margin-bottom: 10px;
+    background: #fff;
+    border-radius: 10px;
+    text-align: right;
+    padding: 5px 10px;
+    box-shadow: inset 0px 2px 2px 0 #000;
+}
+#result{
+    font-size: 34px;
+    color: black;
+}
+#calculator{
+    font-size: 20px;
+    color: gray;
+
+}
+/*=========.button-content=========*/
+.button-content:after, .content:before{
+    content: "";
+    display: table;
+    clear: both;
+}
+.button-content{
+    margin: 0 -10px;
+}
+.button{
+    float: right;
+    width: 25%;
+    height: 60px;
+    padding: 5px 10px;
+    line-height: 50px;
+
+
+}
+.button-item{
+    border: 1px solid #000;
+    height: 100%;
+    border-radius: 10px;
+    background: #463E50;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 5px 0 0 #000, inset 0 -0.3px 20px 0 #847A7A, inset 0 0 5px 0 #847A7A;
+}
+.button-item:active{
+    top: 5px;
+    box-shadow: none;
+}
+#AC,#CE{
+    background: #650707;
+    box-shadow: 0 5px 0 0 #000, inset 0 -0.5px 20px 0 #992F2F, inset 0 0 5px 0 #992F2F;
+}
+#double-col{
+    width: 50%;
+}
+#double-row{
+    height: 120px;
+    line-height: 110px;
+}
+/*=========.footer===========*/
+.footer{
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px #000;
+}
+.footer__desc{
+    font-style: italic;
+    color: #1703DC;
+}
+.footer__name{
+    font-weight: bold;
+    font-style: normal;
+    color: #DC0303;
+}

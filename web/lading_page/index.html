@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>bai tap 6</title>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--font-awesome-->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!--main-->
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="top-left">
+                            <div class="left-languages left-item">
+                                <i class="fa fa-globe left-languages__icon" aria-hidden="true"></i>
+                                <div class="dropdown ">
+                                    <div id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span>English</span>
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </div>
+                                    <ul class="dropdown-menu dropdown-access" aria-labelledby="dropdownMenu2">
+                                        <li><a href="#">Vietnamese</a></li>
+                                        <li><a href="#">chinese</a></li>
+                                        <li><a href="#">japanese</a></li>
+                                        <li><a href="#">france</a></li>
+                                    </ul>
+                                </div>
+                                <!--End .dropdown-->
+                            </div>
+                            <!--End left-languages .left-item-->
+                            <div class="left-phone left-item">
+                                <i class="fa fa-phone left-phone__icon" aria-hidden="true"></i>
+                                <a href="tel:1(800)686-6688" class="left-phone__link">1(800)686-6688</a>
+                            </div>
+                            <!--End .left-phone .left-item-->
+                        </div>
+                        <!--End .top-left-->
+                    </div>
+                    <!--End .col-md-6 .col-sm-12 .col-xs-12-->
+                    <div class="col-sm-6">
+                        <div class="top-right">
+                            <div class="right-search right-item">
+                                <div class="dropdown ">
+                                    <div id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-search right-search__icon" aria-hidden="true"></i>
+                                    </div>
+                                    <!--End #dropdownMenu2-->
+                                    <form class="dropdown-menu form-search" aria-labelledby="dropdownMenu2">
+                                        <input type="text" class="form-search__input" name="search" id="search" placeholder="Search key...">
+                                        <button class="form-search__btn">Search</button>
+                                    </form>
+                                </div>
+                                <!--End .dropdown-->
+                            </div>
+                            <!--End .right-search .right-item-->
+                            <div class="right-access right-item">
+                                <div class="dropdown ">
+                                    <div id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span>Sign in</span>
+                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    </div>
+                                    <!--End #dropdownMenu2-->
+                                    <ul class="dropdown-menu dropdown-access" aria-labelledby="dropdownMenu2">
+                                        <li><a href="#">Sign out</a></li>
+                                        <li><a href="#">Register</a></li>
+                                    </ul>
+                                </div>
+                                <!--End .dropdown-->
+                            </div>
+                            <!--End .right-access .right-item-->
+                            <div class="right-social right-item">
+                                <a href="https://www.facebook.com/" class="right-social__link"><i class="fa fa-facebook right-social__icon" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/" class="right-social__link"><i class="fa fa-twitter right-social__icon" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/" class="right-social__link"> <i class="fa fa-google-plus right-social__icon" aria-hidden="true"></i></a>
+                            </div>
+                            <!--End .right-social. .right-item-->
+                        </div>
+                        <!--End .top-right-->
+
+                    </div>
+
+                </div>
+                <!--End row-->
+            </div>
+            <!--End .container-->
+        </div>
+        <!--End .header-top-->
+        <nav class="navbar navbar-default header-nav">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                    <a class="navbar-brand nav-logo__link"><img src="images/logo.png" alt="" class="nav-logo__img"></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="navbar-right__item"><a href="#" class="navbar-right__link">Layouts</a></li>
+                        <li class="navbar-right__item"><a href="#" class="navbar-right__link">pages</a></li>
+                        <li class="navbar-right__item"><a href="#" class="navbar-right__link">work</a></li>
+                        <li class="navbar-right__item"><a href="#" class="navbar-right__link">Blog</a></li>
+                        <li class="navbar-right__item"><a href="#" class="navbar-right__link">shop</a></li>
+                        <li class="navbar-right__item"><a href="#" class="navbar-right__link">Elements</a></li>
+                        <li class="navbar-right__item navbar-right__getquote"><a href="#" class="navbar-right__link">GET A QUOTE</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!--End .container-->
+        </nav>
+        <!--End .header-nav-->
+    </header>
+    <!--End header-->
+    <section>
+        <div class="section-banner">
+            <div class="banner-slider">
+                <div class="slider-item">
+                    <img src="images/banner_0.png" alt="" class="slider-item__img">
+                    <p class="slider-item__desc">2017 - Ha Noi, Viet Nam.</p>
+                </div>
+                <!--End .slider-item-->
+                <div class="slider-item">
+                    <img src="images/banner_1.png" alt="" class="slider-item__img">
+                    <p class="slider-item__desc">2017 - Ha Noi, Viet Nam.</p>
+                </div>
+                <!--End .slider-item-->
+                <div class="slider-item">
+                    <img src="images/banner_2.png" alt="" class="slider-item__img">
+                    <p class="slider-item__desc">2017 - Ha Noi, Viet Nam.</p>
+                </div>
+                <!--End .slider-item-->
+                <div class="slider-item">
+                    <img src="images/banner_3.png" alt="" class="slider-item__img">
+                    <p class="slider-item__desc">2017 - Ha Noi, Viet Nam.</p>
+                </div>
+                <!--End .slider-item-->
+                <div class="slider-item">
+                    <img src="images/banner_4.png" alt="" class="slider-item__img">
+                    <p class="slider-item__desc">2017 - Ha Noi, Viet Nam.</p>
+                </div>
+                <!--End .slider-item-->
+            </div>
+            <!--End .banner-slider-->
+        </div>
+        <!--End .section-banner-->
+        <div class="section-mission">
+            <div class="container">
+                <div class="mission-header  text-center">
+                    <h2 class="mission-header__title">our mission</h2>
+                    <p class="mission-header__desc">I'll tell you a cleaning secret, one that can help you save time, money, and enchane your sustainability programs. Best of all, it's an easy to implement, ready available solution.</p>
+                </div>
+                <!--End section-header-->
+                <div class="mission-main">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="mission-item">
+                                <img src="images/mission__img1.png" alt="" class="mission__img">
+                                <div class="mission-body">
+                                    <h3 class="mission-body__title">We create Experiences</h3>
+                                    <p class="mission-body__desc">Don't be distracted by criticism. Remember the only taste of seccess some people.</p>
+                                    <a href="#" class="mission-body__link">READ MORE</a>
+                                </div>
+                                <!--End .mission-body-->
+                            </div>
+                            <!-- End .mission-item-->
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="mission-item">
+                                <img src="images/mission__img2.png" alt="" class="mission__img">
+                                <div class="mission-body">
+                                    <h3 class="mission-body__title">We create Experiences</h3>
+                                    <p class="mission-body__desc">Don't be distracted by criticism. Remember the only taste of seccess some people.</p>
+                                    <a href="#" class="mission-body__link">READ MORE</a>
+                                </div>
+                                <!--End .mission-body-->
+                            </div>
+                            <!-- End .mission-item-->
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="mission-item">
+                                <img src="images/mission__img3.png" alt="" class="mission__img">
+                                <div class="mission-body">
+                                    <h3 class="mission-body__title">We create Experiences</h3>
+                                    <p class="mission-body__desc">Don't be distracted by criticism. Remember the only taste of seccess some people.</p>
+                                    <a href="#" class="mission-body__link">READ MORE</a>
+                                </div>
+                                <!--End .mission-body-->
+                            </div>
+                            <!-- End .mission-item-->
+                        </div>
+                    </div>
+                    <!--End .row-->
+                </div>
+                <!--End .section-main-->
+            </div>
+            <!--End .container-->
+        </div>
+        <!--End .mission-->
+        <div class="section-video">
+            <!-- Button trigger modal -->
+            <div class="video-control" data-toggle="modal" data-target="#myModal">
+                <img src="images/play.png" alt="" class="video-control__img">
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <iframe src="https://www.youtube.com/embed/coBEyIwYE-c" frameborder="0" allowfullscreen class="modal-body__video" id="modal__video"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End .section-video-->
+        <div class="section-skill">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="skill-item">
+                            <i class="fa fa-cog skill-item__icon" aria-hidden="true"></i>
+                            <h3 class="skill-item__title">customizability</h3>
+                            <p class="skill-item__desc">Don't be distracted by criticism. Remember the only taste of success some people. </p>
+                        </div>
+                        <!--End .skill-item-->
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="skill-item">
+                            <i class="fa fa-pencil skill-item__icon " aria-hidden="true"></i>
+                            <h3 class="skill-item__title">customizability</h3>
+                            <p class="skill-item__desc">Don't be distracted by criticism. Remember the only taste of success some people. </p>
+                        </div>
+                        <!--End .skill-item-->
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="skill-item">
+                            <i class="fa fa-tachometer skill-item__icon" aria-hidden="true"></i>
+                            <h3 class="skill-item__title">customizability</h3>
+                            <p class="skill-item__desc">Don't be distracted by criticism. Remember the only taste of success some people. </p>
+                        </div>
+                        <!--End .skill-item-->
+
+                    </div>
+                </div>
+                <!--End.row-->
+            </div>
+            <!--End .container-->
+        </div>
+        <!--End .skill-->
+        <div class="section-quote">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="quote-avatar">
+                                        <img src="images/avatar.png" class="quote-avatar__img" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 cil-sm-12">
+                                    <div class="quote-body">
+                                        <i class="fa fa-quote-left quote-body__title" aria-hidden="true"></i>
+                                        <p class="quote-body__desc">I wanted to mention that these day. When the opposite of good customer and tech support tend to be the norm, it's alway great having team like you guys at Yolo! So be sure that i'll always spread the word about how good your product is and the extraodinary level of support that you provide any time there is any need for it.</p>
+                                        <p class="quote-body__writer"><strong class="quote-body__name">Ollie Schneiker </strong> - CEO DeerCreative</p>
+                                    </div>
+                                    <!--End .quote-body-->
+                                </div>
+                            </div>
+                            <!--End .row-->
+                        </div>
+                        <!--End .container-->
+                    </div>
+                    <!--End .item-->
+                    <div class="item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="quote-avatar">
+                                        <img src="images/avatar.png" class="quote-avatar__img" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="quote-body">
+                                        <i class="fa fa-quote-left quote-body__title" aria-hidden="true"></i>
+                                        <p class="quote-body__desc">I wanted to mention that these day. When the opposite of good customer and tech support tend to be the norm, it's alway great having team like you guys at Yolo! So be sure that i'll always spread the word about how good your product is and the extraodinary level of support that you provide any time there is any need for it.</p>
+                                        <p class="quote-body__writer"><strong class="quote-body__name">Ollie Schneiker </strong> - CEO DeerCreative</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End .row-->
+                        </div>
+                        <!--End .container-->
+                    </div>
+                    <!--End .item-->
+                </div>
+                <!--End .carousel-inner-->
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <i class="fa fa-angle-left carousel-control__icon" aria-hidden="true"></i>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <i class="fa fa-angle-right carousel-control__icon" aria-hidden="true"></i>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+
+        </div>
+        <!--End .section-quote-->
+        <div class="section-contact">
+            <div class="container">
+                <div class="contact-header text-center">
+                    <h3 class="contact-header__title ">Are you ready to be success with us?</h3>
+                    <p class="contact-header__desc">Tell us about your story and yur project</p>
+                </div>
+                <!--End .contact-header-->
+                <form action="" method="get" class="contact-form">
+                    <input type="text" class="contact-form__input" id="name" placeholder=" Your Name">
+                    <input type="email" class="contact-form__input" id="email" placeholder=" Email Address">
+                    <input type="tel" class="contact-form__input" id="phone" placeholder=" Your Phone">
+                    <button type="submit" class="contact-form__btn">SUBSCRIBE</button>
+                </form>
+            </div>
+            <!--End .container-->
+        </div>
+        <!--End .section-contact-->
+        <div class="section-brand">
+            <div class="container">
+                <div class="brand-body">
+                    <div class="brand-slideshow">
+                        <div class="brand-slider">
+                            <a href="#" class="brand-slider__link"><img src="images/brand1.png" alt="" class="brand-slider__img brand-slider__first"></a>
+                            <a href="#" class="brand-slider__link"><img src="images/brand2.png" alt="" class="brand-slider__img"></a>
+                        </div>
+                        <div class="brand-slider">
+                           <a href="#" class="brand-slider__link"><img src="images/brand3.png" alt="" class="brand-slider__img"></a>
+                           <a href="#" class="brand-slider__link"><img src="images/brand4.png" alt="" class="brand-slider__img"></a>
+                       </div>
+                        <div class="brand-slider">
+                           <a href="#" class="brand-slider__link"><img src="images/brand5.png" alt="" class="brand-slider__img"></a>
+                           <a href="#" class="brand-slider__link brand-slider__last"><img src="images/brand6.png" alt="" class="brand-slider__img"></a> 
+                        </div>
+                    </div>
+
+                </div>
+                <!--End .band-body-->
+            </div>
+            <!--End .container-->
+        </div>
+        <!--End .brand-->
+    </section>
+    <!--End section-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 ">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="footer-share">
+                                <img src="images/logo.png" alt="" class="share__logo"><br>
+                                <a href="https://www.facebook.com/" class="footer-share__link"> <i class="fa fa-google-plus footer-share__icon" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/" class="footer-share__link"> <i class="fa fa-twitter footer-share__icon" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/" class="footer-share__link"> <i class="fa fa-google-plus footer-share__icon" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/" class="footer-share__link"> <i class="fa fa-instagram footer-share__icon" aria-hidden="true"></i></a>
+                                <a href="https://www.facebook.com/" class="footer-share__link"> <i class="fa fa-pinterest footer-share__icon" aria-hidden="true"></i></a>
+                                <p class="footer-share__desc">Copyright &copy;2017 DeerCreative Inc</p>
+                            </div>
+                            <!--End .footer-share-->
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="footer-address">
+                                <p class="footer-address__desc footer-address__phone">1 (800)686-6688</p>
+                                <p class="footer-address__desc">info.deercreate@gmail.com</p>
+                                <p class="footer-address__desc footer-address__street">40 Baria Street 133/2</p>
+                                <p class="footer-address__desc">NewYork City, US</p>
+                            </div>
+                            <!--End .footer-address-->
+                        </div>
+                    </div>
+                    <!--End .row-->
+
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <ul class="footer-list">
+                                <li class="footer-list__item"><a href="#" class="footer-list__link">Home</a></li>
+                                <li class="footer-list__item"><a href="#" class="footer-list__link">About</a></li>
+                                <li class="footer-list__item"><a href="#" class="footer-list__link">Services</a></li>
+                                <li class="footer-list__item"><a href="#" class="footer-list__link">work</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <ul class="footer-list">
+                                <li class="footer-list__item"><a href="#" class="footer-list__link">Disclaimer</a></li>
+                                <li class="footer-list__item"><a href="#" class="footer-list__link">Privacy</a></li>
+                                <li class="footer-list__item"><a href="#" class="footer-list__link">Advertisement</a></li>
+                                <li class="footer-list__item"><a href="#" class="footer-list__link">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!--End .row-->
+                </div>
+            </div>
+            <!--End .row-->
+        </div>
+        <!--End .container-->
+    </footer>
+    <!--End footer-->
+    <!--jquery-->
+    <script src="js/jquery-3.2.1.js"></script>
+    <!--js__bootstrap-->
+    <script src="js/bootstrap.js"></script>
+    <!--js__main-->
+        <script src="js/main.js"></script>
+</body>
+
+</html>

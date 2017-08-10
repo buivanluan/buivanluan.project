@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/cf62ea97ee.js"></script>
+    <style>
+    * {
+        box-sizing: border;
+    }
+    
+    body {
+        font-size: 24px;
+        font-family: arial;
+        background: url('https://wallpaperscraft.com/image/flying_background_sky_83511_1280x1024.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position:center;
+    }
+    /*=====.container=====*/
+    
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    /*=====.header=====*/
+    
+    .header:before,
+    .header:after {
+        content: "";
+        display: table;
+    }
+    
+    .header {
+        width: 100%;
+        background: #7A0F0F;
+        position: relative;
+        height: 157px;
+
+
+    }
+    /*=====.header__title*/
+    
+    .header__title {
+        width: 85%;
+        float: left;
+        height: 157px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+       
+    }
+    h1{
+        font-size: 36px;
+        font-weight: bold;
+        text-shadow: 5px 5px 5px black;
+    }
+    .search{
+        text-align: right;
+        margin-top: 10px;
+        display: block;
+    }
+    /*=====.header__select=====*/
+    
+   
+    
+    ul {
+        list-style-type: none;
+       /* text-align: right;*/
+       
+    }
+    
+    li {
+
+        margin: 5px 0;
+        transition: all 1s;
+        width: 44px;
+        position: absolute;
+        top: 0;
+        right: 0;  
+    }
+    li:hover{
+        width: 140px;
+        right: 0;
+    }
+    li:hover p{
+        opacity: 1;
+    }
+    li p{
+        margin: 0;
+        transition: all 1s;
+        position: absolute;
+        top: 5px;
+        left: 44px;
+
+    }
+   
+    .active{
+        width: 140px;
+        right: 0;
+    }
+    .active p{
+        opacity: 1 !important;
+     
+    }           
+    .fa{
+        padding: 10px;
+    }
+    .header__select__icon{
+        width: 44px;
+    }
+    
+    .header__select--all {
+        background: #FB295A;
+    }
+    .header__select--all p{
+        opacity: 0;
+    }
+    
+    .header__select--online {
+        background: #F3A2A2;
+        top: 50px;  
+    }
+    .header__select--online p{
+        opacity: 0;      
+    }
+    
+    .header__select--offline {
+        background: #D5D3D3; 
+        top: 100px;   
+    }
+    .header__select--offline p{
+       opacity: 0;       
+    }
+    /*=====.row=====*/
+    
+    .row:after,
+    .row:before {
+        content: "";
+        display: table;
+    }
+    
+    .row {
+        clear: both;
+        text-align: center;
+        margin: 10px 0;
+        color: #fff;
+        text-shadow: 3px 3px 0.5px black;
+        font-weight: bold;
+    }   
+    .online {
+        background: #F3A2A2;
+    }
+    .offline {
+        background: #D5D3D3;
+    }
+    /*=====.row__logo=====*/
+    
+    .row__logo {
+        width: 10%;
+        float: left;
+        padding: 10px;
+        height: 100%;
+    }
+    
+    .row__logo img {
+        width: 70px;
+        border: 5px solid brown;
+        border-radius: 50%;
+    }
+    
+    .row__logo img:hover {
+        border-radius: 30%;
+    }
+    /*=====.row__link=====*/
+    
+    .row__link {
+        width: 30%;
+        float: left;
+        padding: 20px;
+    }
+    .stream:hover{
+        color: #ff9600;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        display: inline-block;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    a:link,
+    a:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: #ff9600;
+        text-decoration: none;
+        box-shadow: 3px 3px 5px 0 black;
+    }
+    /*=====.row__live=====*/
+    
+    .row__live {
+        width: 60%;
+        float: left;
+        padding: 20px;
+    }
+
+    iframe{
+        height: 360px; 
+        width: 640px;
+    }
+
+    .row__video{
+        display: table;
+        margin: 0 auto;
+        position: relative;
+    }
+    .fa-video{
+        position: absolute;
+        top: -25px;
+        right: -25px
+    }
+    .fa-video:hover{
+        color: red;
+    }
+    .button_prev,
+    .button_next{
+        background: #fff;
+        display: inline-block;
+        float: right;
+        padding: 5px 10px;
+        border: 2px solid brown;
+        border-radius: 10px;
+    }
+    .button_prev p,
+    .button_next p{
+        margin: 0;
+    }
+    @media (max-width: 991px) {
+        .row__logo,
+        .row__link,
+        .row__live{
+            width: 100%;
+        }
+        h1{
+            font-size: 30px;
+        }
+         iframe{
+        height: 240px;
+        width: 430px;
+    }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header__title">
+                <h1>TWITCH STREAMERS</h1>
+            </div>
+            <div class="header__select">
+                <ul>
+                    <li class="header__select--all active"><i class="fa fa-list" aria-hidden="true"></i><p>All</p></li>
+                    <li class="header__select--online"><div class="header__select__icon"><i class="fa fa-check" aria-hidden="true"></i></div><p>Online</p></li>
+                    <li class="header__select--offline"><div class="header__select__icon"><i class="fa fa-times" aria-hidden="true"></i></i></div><p>Offline</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="search">
+            <form action="" method="get" accept-charset="utf-8">
+                <input type="text" name="" id = "search__key">
+                <button type="submit" id = "search__act">search</button>
+            </form>
+        </div>  
+        <div class="content"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script>
+    var key = "g10wuixvlamhov758c99ubcncuvawz";
+    var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "habathcx", "RobotCaleb", "noobs2ninjas"];
+    var n = 0;
+    var title;
+    var stream;
+    function getstream(channel,get){
+         $.getJSON('https://api.twitch.tv/kraken/streams/' + channel + '?client_id=' + key, function(data){
+            if (data.stream === null) {
+                stream = "offline";
+            }else {
+             stream = "online";
+            }
+         get(stream,channel);
+     });
+    }
+    creat(channels);
+    function creat(arr__channel){
+        for (var i = 0;i< arr__channel.length; i++) {
+        getstream(arr__channel[i],function get(stream,channel){
+            $.getJSON('https://api.twitch.tv/kraken/channels/' + channel+ '?client_id=' + key, function(data) {
+                var row = document.createElement("div")
+                var logo = document.createElement("div")
+                var link = document.createElement("div")
+                var live = document.createElement("div")
+                var video = document.createElement("div")
+                $(row).addClass("row");
+                $(logo).addClass("row__logo");
+                $(link).addClass("row__link");
+                $(live).addClass("row__live");
+                $(video).addClass("row__video");
+                $(".content").append(row);
+                $(row).append(logo);
+                if(data.logo){
+                    $(logo).append('<img src="' + data.logo + '" alt="">');
+                }else{
+                    $(logo).append('<img src="http://www.tinhduyen.com/diendan/style_images/i-corp/no-avatar.gif" alt="">');
+                }                
+                $(row).append(link);
+                $(link).append('<a href="' + data.url + '" title="" target="_blank">' + data.name + '</a>'); 
+                $(row).append(live);
+                $(video).append('<i class="fa fa-times fa-video" aria-hidden="true"></i><iframe src="https://player.twitch.tv/?channel=' +data.name+ '&muted=true"  frameborder="0" scrolling="no" allowfullscreen="true">')
+                  if(stream=="offline"){
+                        $(live).append('<p>Offline</p>');
+                        $(row).addClass('offline');
+                    }
+                    else{
+                        $(live).append('<p>' + data.status + '</p>');
+                        $(live).addClass('stream');
+                        $(row).addClass('online');
+                    }
+                $(live).on("click",function(){
+                    $(row).append(video); 
+                    $(".fa-video").on("click",function(){
+                    $(".row__video").remove();
+                })  
+                })              
+                if (data.profile_banner) {
+                    $(row).css({
+                        "background": "url(" + data.profile_banner + ")",
+                        "backgroundPosition": "center center",
+                        "backgroundSize": "cover",
+                        "backgroundRepeat": "no-repeat",
+                    });
+                }
+            });
+        });
+    };
+    }
+    
+
+        $(".header__select--all").on("click", function() {
+            $("li").removeClass('active');            
+            $(this).addClass('active');
+            $(".online").css("display", "block");
+            $(".offline").css("display", "block");
+        })
+        $(".header__select--online").on("click", function() {
+            $("li").removeClass('active');            
+            $(this).addClass('active');         
+            $(".online").css("display", "block");
+            $(".offline").css("display", "none");
+        })
+        $(".header__select--offline").on("click", function() {
+            $("li").removeClass('active');            
+            $(this).addClass('active');
+            $(".online").css("display", "none");
+            $(".offline").css("display", "block");
+        })
+        $("form").on("submit",function(){
+            event.preventDefault();
+           
+            var search__key = $("#search__key").val();
+            
+            getsearch('https://api.twitch.tv/kraken/search/channels?query=' + search__key + '&client_id=' + key);
+        });
+        function getsearch(http){
+            $(".row").remove();
+            $(".button_next").remove();
+            $(".button_prev").remove();
+            $.getJSON(http, function(data) {
+                console.log(data._links.prev)
+                console.log(data)
+                var search__channel = [];
+                for(var j = 0;j< data.channels.length;j++){
+                    search__channel.push(data.channels[j].display_name)
+                }
+                creat(search__channel);
+                 var button_next = document.createElement("div");
+                $(button_next).addClass('button_next');
+                $(button_next).append('<p>Next</p>');
+                setTimeout(function(){
+                    $(".container").append(button_next);
+                },1000)
+                if(data._links.prev){
+                    console.log(data._links.prev)
+                    var button_prev = document.createElement("div");
+                    $(button_prev).addClass('button_prev');
+                    $(button_prev).append('<p>Previous</p>');
+                     setTimeout(function(){
+                    $(".container").append(button_prev);
+                    },1000)
+                    $(button_prev).on("click",function(){
+                           
+                       getsearch(data._links.prev +'&client_id=' + key);
+                       
+                    });    
+                }
+                $(button_next).on("click",function(){
+                       
+                   getsearch(data._links.next +'&client_id=' + key);
+                   
+                });    
+                    
+            });
+        }
+     
+    </script>
+</body>
+
+</html>

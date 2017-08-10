@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <script src="https://use.fontawesome.com/cf62ea97ee.js"></script>
+     <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Lobster|Oxygen" rel="stylesheet">
+    <style>
+    body {
+        text-align: center;
+        background: #A69D9D;
+        color: black;
+        font-family: 'Oxygen', sans-serif;
+    }
+    .container{
+    	margin-top: 100px;
+    }
+    
+    ul li{
+    	background: #fff;
+    	margin: 30px 0;
+    	
+    	text-align: left;
+    	list-style-type: none;
+    	background: #F7F3F3;
+    }
+    ul li:hover{
+    	box-shadow: 5px 5px 8px 0 black;
+    }
+    ul li:hover a{
+		text-decoration: none;
+		color: black;
+    }
+    a{
+    	color: black;
+    	
+    }
+   	a:focus{
+    	color: black;
+    	text-decoration: none;
+    	
+    }
+    h2{
+		padding: 20px;
+		padding-bottom: 10px;
+		font-weight: bold;
+    }
+    h2:hover a{
+    	color: black;
+    	text-decoration: none;
+    }
+    p{
+    	padding: 20px;
+    	padding-top: 10px;
+    	font-size: 24px;
+    	font-weight: normal;
+
+    }
+   	form{
+   		display: inline-block;
+   		position: relative;
+   	}
+	.fa-times{
+	
+	    position: absolute;
+	    top: 9px;
+    	right: 13px;
+	    color: #E2DCDC;
+	    font-size: 30px;
+
+		z-index: -1;
+	   
+	}
+	.fa-search {
+	   position: absolute;
+	   top: -3px;
+    	right: -8px;
+	    color: #E2DCDC
+;
+	    font-size: 60px;
+	    z-index: -1;
+		   
+	}
+    input {
+        width: 50px;
+        height: 50px;
+        border: 7px solid #E2DCDC;
+        border-radius: 25px;
+        padding: 0 10px;
+        transition: width 1s;
+        z-index: 10;
+    }
+    #note{
+
+    }
+    
+    input:focus {
+        outline: none;
+        
+    }
+
+  
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    	<h2><a href="https://en.wikipedia.org/wiki/Special:Random" title="" target="_blank">Click here for a random article</a></h2>
+        <form action="" method="get" accept-charset="utf-8">
+            
+            <input type="text" name="search" id="search" autocomplete="off">
+            <i class="fa fa-times" aria-hidden="true"></i>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="submit" name="submit"  style="display: none;">
+           
+           
+        </form>
+         <p id="note">click icon to search</p>
+      
+         <ul class="note">
+         	
+         </ul>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <script>
+    var current = {};
+    var currentRun = []
+    var key = ""; 
+        $("input").on("click", function() {
+        $(this).css("width", "300px");
+        $(".fa-times").animate({
+        	"z-index": 100,       	       	
+        }, 1000);
+         $(".fa-search").animate({
+        	"fontSize": 0, 
+        	"top": "20px",
+    		"right": "20px",     	       	
+        }, 1000);
+    })
+     $(".fa-times").on("click", function() {
+        $("input").css("width","50px");
+        $("#search").val("");
+        $(".fa-times").animate({
+        	"z-index": -1,
+        }, 500);
+         $(".fa-search").animate({
+        	"fontSize": "60px", 
+        	"right": "-8px",
+    		"top": "-3px",     	       	
+        }, 1000);
+    })
+    $("form").on("submit",function(event){
+    	event.preventDefault();
+    	key = $("#search").val();
+    	run();
+    })
+    function run(){
+    	$.ajax({
+	 		url: "https://en.wikipedia.org//w/api.php?action=query&format=json&prop=extracts&generator=search&exsentences=3&exlimit=max&exintro=1&explaintext=1&gsrsearch=" + key,
+	        data: {},
+	        dataType: 'jsonp',
+	        success: function(data) {
+	        	if(data.query){
+	        		$(".note").html("");
+	        		current = data.query.pages;
+	        		for(var run in current){
+
+	        				$(".note").html($(".note").html() +'<li><a href=" https://en.wikipedia.org/?curid=' + current[run].pageid +'" title="" target="_blank"><h2>'+ current[run].title +'</h2><p>'+ current[run].extract +'</p></a></li>')
+	        				console.log(current[run])
+	        		}
+	        	}else{
+	        		$(".note").html('<li><h2>Not found</h2></li>')
+	        	}
+	        },
+	        error: function(err) {
+	        	$(".note").html('<li><h2>Not found</h2></li>')
+	        },
+	    });
+    }
+    	
+ 
+    
+
+    </script>
+</body>
+
+</html>
