@@ -48,7 +48,7 @@ body{
     font-size: 30px;
     text-align: center;
     font-family: adobe;
-    padding-top: 41px;
+    margin-top: 41px;
     color: #fff;
     font-weight: normal;
     text-shadow: 1px 2px 3px black;
@@ -58,17 +58,25 @@ body{
     list-style-type: none;
 }
 .logo-list__title{
-    padding-top: 13px;
+    margin-top: 10px;
     line-height: 22px;
-    color: #fff;
     font-family: goudy;
+    color: #fff;
     font-size: 16px;
     text-shadow: 0px 2px 2px black;
     text-transform: capitalize;
     text-align: center;
 }
-.logo-list__title:hover{
+.logo-list__link{
+    color: #fff;
+    text-decoration: none;
+}
+.logo-list__title:hover {
     color: #f6e68b;
+}
+.logo-list__link:hover{
+    color: #f6e68b;
+    text-decoration: none;
 }
 .logo-list__desc{
     color: #7e7e7e;
@@ -88,9 +96,9 @@ body{
     background-position: center center;
     box-shadow: 0px 0px 10px 0px black;
     position: absolute;
-    top: 150px;
+    top: 115px;
     left: 150px;
-    display: none;
+    display: block;
     z-index: 10;
 }
 .yellow{
@@ -232,7 +240,7 @@ hr{
     display: table;
     clear: both;
 }
-.comment-main__btn{
+.comment-main__link{
     float: right;
     margin-right: 28px;
     margin-top: 16px;
@@ -243,11 +251,13 @@ hr{
     color: #fff;
     text-shadow: 0 1px 1px #000;
     background: #393939;
-    border: none;
+    display: inline-block;
     border-radius: 10px;
+    text-decoration: none;
 }
-.comment-main__btn:hover{
+.comment-main__link:hover{
     color: #f6e68b;
+    text-decoration: none;
 }
 .comment-content--medium{
     padding-left: 92px;
@@ -414,6 +424,15 @@ main-contact:after, .main-contact:before{
     list-style-image: url("../images/list_style.png");
 
 
+}
+.sidebar-list__link{
+    color: #7c7c7c;
+    text-decoration: none;
+}
+.sidebar-list__link:hover,
+.sidebar-list__link:focus{
+     color: #000;
+    text-decoration: none;
 }
 
 .sidebar-footer{
