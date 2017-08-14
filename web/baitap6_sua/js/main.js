@@ -12,7 +12,7 @@ $(document).ready(function () {
         autoStart: true,
         firstLayer: 1,
         skin: 'fullwidth',
-        skinsPath: '../../skins/',
+        skinsPath: 'skins/',
         responsiveUnder: 960,
         responsive: false,
     });
