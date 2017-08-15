@@ -676,23 +676,7 @@ footer {
         height: 300px;
     }
     /*=======.section-brand=======*/
-    .brand-slideshow {
-        width: 100%;
-        text-align: center;
-        animation: none;
-    }
-    .brand-slider {
-        display: inline-block;
-        float: none;
-        width: auto;
-    }
-    .brand-slider__link {
-        margin-left: 0;
-        margin-right: 45px;
-    }
-    .brand-slider__last {
-        padding-right: 0;
-    }
+
     /*========.footer=======*/
     footer {
         text-align: left;
@@ -835,9 +819,6 @@ footer {
         margin-left: 20px;
     }
     /*=========.section-brand==========*/
-    .section-brand {
-        text-align: left;
-    }
     /*======footer======*/
     .footer-share__link {
         padding-top: 35px;
