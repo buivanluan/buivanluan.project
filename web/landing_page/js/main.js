@@ -7,30 +7,25 @@ $(document).ready(function () {
     $('#myModal').on('show.bs.modal', function (e) {
         $("#modal__video").attr("src", url);
     });
-    /*---------layer-slider---------*/
-    $('#layerslider').layerSlider({
-        autoStart: true,
-        firstLayer: 1,
-        skin: 'fullwidth',
-        skinsPath: 'skins/',
-        responsiveUnder: 960,
-        responsive: false,
-    });
     /*---------owl-carousel---------*/
     $('.owl-carousel').owlCarousel({
+        items: 4,
         loop: true,
         margin: 10,
-        nav: true,
+        autoplay: true,
+        autoplayTimeout: 1000,
+        autoplayHoverPause: true,
+
         responsive: {
             0: {
-                items: 1
+                items: 2
             },
             600: {
-                items: 3
+                items: 4
             },
             1000: {
-                items: 5
+                items: 6
             }
         }
-    })
+    });
 });

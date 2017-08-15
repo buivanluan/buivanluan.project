@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,  initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>landing page</title>
+    <title>bai tap 6</title>
     <!--bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!--font-awesome-->
     <link rel="stylesheet" href="css/font-awesome.css">
+    <!--layer-slider-->
+    <link rel="stylesheet" href="css/layerslider.css">
+    <!--owl-carousel-->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <!--main-->
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
@@ -130,30 +135,30 @@
     <!--End header-->
     <section>
         <div class="section-banner">
-            <div class="banner-slider">
-                <div class="slider-item">
-                    <img src="images/banner_0.png" alt="" class="slider-item__img">
-                    <p class="slider-item__desc">2017 - Ha Noi, Viet Nam.</p>
+            <div class="banner-slider" id="layerslider" style="height: 700px;">
+                <div class="slider-item ls-slide" data-ls="slidedelay: 4000; transition3d: 2,7,9;">
+                    <img src="images/banner_4.png" alt="" class="slider-item__img ls-bg">
+                    <p class="ls-l slider-item__desc" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeOutElastic;rotatexin:-90;transformoriginin:10% top 0;offsetxout:-200;durationout:1000;">2017 - Ha Noi, Viet Nam.</p>
                 </div>
                 <!--End .slider-item-->
-                <div class="slider-item">
-                    <img src="images/banner_1.png" alt="" class="slider-item__img">
-                    <p class="slider-item__desc">2017 - Ha Noi, Viet Nam.</p>
+                <div class="slider-item ls-slide" data-ls="slidedelay: 4000; transition3d: 10,12,16">
+                    <img src="images/banner_0.png" alt="" class="slider-item__img ls-bg">
+                    <p class="ls-l slider-item__desc" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeOutElastic;rotatexin:-90;transformoriginin:10% top 0;offsetxout:-200;durationout:1000;">2017 - Ha Noi, Viet Nam.</p>
                 </div>
                 <!--End .slider-item-->
-                <div class="slider-item">
-                    <img src="images/banner_2.png" alt="" class="slider-item__img">
-                    <p class="slider-item__desc">2017 - Ha Noi, Viet Nam.</p>
+                <div class="slider-item ls-slide" data-ls="slidedelay: 4000; transition3d: 20,22,24">
+                    <img src="images/banner_1.png" alt="" class="slider-item__img ls-bg">
+                    <p class="ls-l slider-item__desc" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeOutElastic;rotatexin:-90;transformoriginin:10% top 0;offsetxout:-200;durationout:1000;">2017 - Ha Noi, Viet Nam.</p>
                 </div>
                 <!--End .slider-item-->
-                <div class="slider-item">
-                    <img src="images/banner_3.png" alt="" class="slider-item__img">
-                    <p class="slider-item__desc">2017 - Ha Noi, Viet Nam.</p>
+                <div class="slider-item ls-slide" data-ls="slidedelay: 4000; transition3d: 30,33,39">
+                    <img src="images/banner_2.png" alt="" class="slider-item__img ls-bg">
+                    <p class="ls-l slider-item__desc" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeOutElastic;rotatexin:-90;transformoriginin:10% top 0;offsetxout:-200;durationout:1000;">2017 - Ha Noi, Viet Nam.</p>
                 </div>
                 <!--End .slider-item-->
-                <div class="slider-item">
-                    <img src="images/banner_4.png" alt="" class="slider-item__img">
-                    <p class="slider-item__desc">2017 - Ha Noi, Viet Nam.</p>
+                <div class="slider-item ls-slide" data-ls="slidedelay: 4000; transition3d: 20,40,50">
+                    <img src="images/banner_3.png" alt="" class="slider-item__img ls-bg">
+                    <p class="ls-l slider-item__desc" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeOutElastic;rotatexin:-90;transformoriginin:10% top 0;offsetxout:-200;durationout:1000;">2017 - Ha Noi, Viet Nam.</p>
                 </div>
                 <!--End .slider-item-->
             </div>
@@ -339,31 +344,43 @@
                     <p class="contact-header__desc">Tell us about your story and yur project</p>
                 </div>
                 <!--End .contact-header-->
-                <form action="" method="get" class="contact-form">
-                    <input type="text" class="contact-form__input" id="name" placeholder=" Your Name">
-                    <input type="email" class="contact-form__input" id="email" placeholder=" Email Address">
-                    <input type="tel" class="contact-form__input" id="phone" placeholder=" Your Phone">
-                    <button type="submit" class="contact-form__btn">SUBSCRIBE</button>
+                <form action="" method="get" class="contact-form form-inline">
+                    <div class="form-group">
+                        <input type="text" class="contact-form__input " id="name" placeholder=" Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="contact-form__input " id="email" placeholder=" Email Address">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="contact-form__input " id="phone" placeholder=" Your Phone">
+                    </div>
+                    <button type="submit" class="contact-form__btn ">SUBSCRIBE</button>
                 </form>
             </div>
             <!--End .container-->
         </div>
         <!--End .section-contact-->
-        <div class="section-brand">
+         <div class="section-brand">
             <div class="container">
                 <div class="brand-body">
-                    <div class="brand-slideshow">
+                    <div class="brand-slideshow owl-carousel owl-theme">
                         <div class="brand-slider">
                             <a href="#" class="brand-slider__link"><img src="images/brand1.png" alt="" class="brand-slider__img brand-slider__first"></a>
-                            <a href="#" class="brand-slider__link"><img src="images/brand2.png" alt="" class="brand-slider__img"></a>
                         </div>
                         <div class="brand-slider">
-                           <a href="#" class="brand-slider__link"><img src="images/brand3.png" alt="" class="brand-slider__img"></a>
-                           <a href="#" class="brand-slider__link"><img src="images/brand4.png" alt="" class="brand-slider__img"></a>
+                           <a href="#" class="brand-slider__link"><img src="images/brand2.png" alt="" class="brand-slider__img"></a>
                        </div>
                         <div class="brand-slider">
+                           <a href="#" class="brand-slider__link"><img src="images/brand3.png" alt="" class="brand-slider__img"></a>
+                        </div>
+                        <div class="brand-slider">
+                           <a href="#" class="brand-slider__link"><img src="images/brand4.png" alt="" class="brand-slider__img"></a>
+                        </div>
+                        <div class="brand-slider">
                            <a href="#" class="brand-slider__link"><img src="images/brand5.png" alt="" class="brand-slider__img"></a>
-                           <a href="#" class="brand-slider__link brand-slider__last"><img src="images/brand6.png" alt="" class="brand-slider__img"></a> 
+                        </div>
+                        <div class="brand-slider">
+                           <a href="#" class="brand-slider__link"><img src="images/brand6.png" alt="" class="brand-slider__img"></a>
                         </div>
                     </div>
 
@@ -434,12 +451,25 @@
         <!--End .container-->
     </footer>
     <!--End footer-->
+    <!--layer-slider-->
+    <!-- External libraries: jQuery & GreenSock -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/greensock.js" type="text/javascript"></script>
+    <!-- LayerSlider script files -->
+    <script src="js/layerslider.transitions.js" type="text/javascript"></script>
+    <script src="js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+    <script src="js/main-layerslider.js" type="text/javascript"></script>
+    
     <!--jquery-->
     <script src="js/jquery-3.2.1.js"></script>
     <!--js__bootstrap-->
     <script src="js/bootstrap.js"></script>
+    <!--owl-carousel-->
+    <script src="js/owl.carousel.js"></script>
     <!--js__main-->
-        <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
+
+    
 </body>
 
 </html>
