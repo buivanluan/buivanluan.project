@@ -104,7 +104,7 @@
         }
         
         .portfolio-item:hover .portfolio-item__base {
-            width: 110%;
+            width: 101%;
         }
         
         .portfolio-item:hover .thumbnail {
