@@ -487,6 +487,9 @@ width="100%" height="315"
     display: inline-block;
     width: auto;
 }
+.brand-slider{
+    text-align: center;
+}
 /*========footer========*/
 
 footer {
@@ -713,12 +716,6 @@ footer {
         padding-right: 0;
     }
     /*=======.section-brand=======*/
-    .brand-slider__link {
-        margin-right: 89px;
-    }
-    .brand-slider__last {
-        padding-right: 0;
-    }
     /*======footer=======*/
     footer {
         text-align: left;
