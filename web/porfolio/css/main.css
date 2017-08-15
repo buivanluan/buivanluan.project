@@ -56,7 +56,9 @@
         
         .introduce-avatar__img {
             width: 70%;
+           
             border: 5px solid #E0DADA;
+            border-radius: 50%;
         }
         
         .introduce-main__desc {
